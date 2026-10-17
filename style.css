@@ -1,0 +1,150 @@
+
+/* CHOCO QUIZ — Chocolate Theme 🍫 */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #fff8e7;
+
+    background: linear-gradient(135deg, #2b1208, #6b321b, #a65b2e);
+}
+
+h1 {
+    margin: 0;
+    font-size: 48px;
+    letter-spacing: 3px;
+    color: #ffd27d;
+    text-shadow: 0 4px 12px #1a0904;
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+    color: #fff0d2;
+}
+
+button {
+    margin-top: 12px;
+    padding: 15px 34px;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #3b1b0e;
+
+    background: #ffd27d;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #ffe4a8;
+    transform: scale(1.06);
+}
+
+/* CHOCO QUIZ — Quiz Screen */
+
+#welcome-screen,
+#quiz-screen,
+#result-screen {
+    width: min(90%, 650px);
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 248, 231, 0.10);
+    border: 1px solid rgba(255, 210, 125, 0.35);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+#quiz-screen h2 {
+    margin: 28px 0;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #fff0d2;
+}
+
+#question-progress,
+#score-display {
+    display: inline-block;
+    margin: 10px;
+    color: #ffd27d;
+    font-weight: bold;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+#answer-buttons button {
+    width: 100%;
+    min-height: 60px;
+    margin: 0;
+    padding: 12px;
+    font-size: 16px;
+    background: #fff0d2;
+    color: #3b1b0e;
+    border: 2px solid transparent;
+}
+
+#answer-buttons button:hover:not(:disabled) {
+    background: #ffd27d;
+    transform: translateY(-2px);
+}
+
+#answer-buttons button:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+#answer-buttons button.correct {
+    background: #b9f6ca;
+    border-color: #218838;
+}
+
+#answer-buttons button.incorrect {
+    background: #ffcdd2;
+    border-color: #c62828;
+}
+
+#feedback {
+    min-height: 50px;
+    line-height: 1.6;
+    color: #fff0d2;
+}
+
+#next-button {
+    margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+    #answer-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    #welcome-screen,
+    #quiz-screen,
+    #result-screen {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+}

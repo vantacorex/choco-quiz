@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choco Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="welcome-screen">
+        <h1>🍫 CHOCO QUIZ</h1>
+        <p>Your Choco-themed quiz adventure begins here!</p>
+        <button id="start-button">Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" hidden>
+        <h1>🍫 CHOCO QUIZ</h1>
+
+        <p id="question-progress">Question 1 of 10</p>
+        <p id="score-display">Score: 0</p>
+
+        <h2 id="question-text">Your question will appear here.</h2>
+
+        <div id="answer-buttons"></div>
+
+        <p id="feedback"></p>
+
+        <button id="next-button" hidden>Next Question →</button>
+    </div>
+
+    <div id="result-screen" hidden>
+        <h1>🏆 Quiz Complete!</h1>
+        <h2 id="final-score"></h2>
+        <p id="result-message"></p>
+        <button id="restart-button">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
